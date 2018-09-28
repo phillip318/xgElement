@@ -16,6 +16,10 @@ export const removeCate = params => {
   return postJson(`${base}/cate/deleteById`,params);
 };
 
+export const getGoodsListPage = params => { 
+  return postJson(`${base}/goods/findAll`, { params: params }); 
+};
+
 export const batchRemoveUser = params => { return axios.get(`${base}/user/batchremove`, { params: params }); };
 
 export const editUser = params => { return axios.get(`${base}/user/edit`, { params: params }); };
